@@ -48,7 +48,7 @@ public class ImProcServer extends ResponseClass {
                 ij.setImageSrc(files.get("IMAGE"));
                 ij.setPathDst(PATH_DST);
                 ij.setImageDst(ij.getImageSrc());
-                
+
                 System.out.println(ij);
                 // Serialización de la instancia del tipo ImageJob a JSON (String)
                 Gson gson = new Gson();
@@ -77,19 +77,5 @@ public class ImProcServer extends ResponseClass {
             pw.flush();
             pw.close();
         }
-
-//      String logFileName = new SimpleDateFormat("yyyyMMddHHmm'.jpg'").format((new Date()));
-//      String imageName = "images_" + logFileName;
-        // TODO Comprobar que se trata de una petición multipart/form-data
-//      if (req.getHeader("Content-Type").equals("multipart/form-data")) {
-//
-//        // TODO Generar un nombre único para la imagen. Vamos a suponer que se trata de imágenes JPEG
-//        String logFileName = new SimpleDateFormat("yyyyMMddHHmm'.jpg'").format(new Date());
-//        String imageName = "images_" + logFileName;
-//
-//        // TODO Obtener la acción a realizar sobre la imagen y guardar la imagen 
-//        String action = req.getParam("ACTION");
-//        String imageSrc = req.getParam("IMAGE");
-//        System.out.println(action);
     }
 }

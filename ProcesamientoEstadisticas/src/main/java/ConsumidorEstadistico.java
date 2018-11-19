@@ -60,20 +60,10 @@ public class ConsumidorEstadistico {
                         System.out.println(" [x] Received '" + message + "'");
                         JobCompletion jc = gson.fromJson(message, JobCompletion.class);
                         System.out.println(jc);
-//                      
+//
                         String nombreArchivo = "/var/web/resources/estadisticas.csv";
                         String[] entradasCsv = {jc.getWorker(), String.valueOf(jc.getTsCreationMessage()), String.valueOf(jc.getTsReceptionWorker()), String.valueOf(jc.getTsFinalizationWorker())};
-//                        try (FileOutputStream fos = new FileOutputStream(nombreArchivo);
-//                                OutputStreamWriter osw = new OutputStreamWriter(fos,
-//                                        StandardCharsets.UTF_8);
-//                                CSVWriter writer = new CSVWriter(osw)) {
-
-//                        FileWriter mFileWriter = new FileWriter(nombreArchivo, true);
-//                        CSVWriter mCsvWriter = new CSVWriter(mFileWriter);
-//                        mCsvWriter.writeNext(entradasCsv);
-//                        } catch (IOException ex) {
-//                            Logger.getLogger(ConsumidorEstadistico.class.getName()).log(Level.SEVERE, null, ex);
-//                        }
+//
                         FileWriter pw = new FileWriter(nombreArchivo, true);
                         for(String entradas:entradasCsv) {
                             pw.append(entradas);
