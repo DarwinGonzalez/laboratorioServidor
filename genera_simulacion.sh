@@ -8,7 +8,6 @@ echo "#!/bin/bash" >> simulacion.sh
 for i in $(seq 0 99); do
     indice=$i%3;
     echo "curl -H 'Expect:' -F \"ACTION=${ops[$indice]}\" -F \"IMAGE=@$serverSrcDir/images-$i.png\" http://localhost:8080/images && sleep 0.1;" >> simulacion.sh
-    #curl -H 'Expect:' -F \"ACTION=${ops[$indice]}\" -F \"IMAGE=@$serverSrcDir/images-$i.png\" \"http://localhost:8080/images\" && sleep 0.1
 done
 
 
