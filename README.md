@@ -3,7 +3,7 @@
 ## Objetivos
 El objetivo principal de esta práctica es la puesta en marcha de un sistema similar al que se puede ver en la imagen:
 
-![]()
+![](https://github.com/DarwinGonzalez/laboratorioServidor/blob/master/datosEstadisticos/images/esquema.png?raw=true)
 
 Así pues, en este esquema tenemos tres máquinas virtuales interconectadas entre sí. En primer lugar tenemos la máquina TWCAM la cual es la encargada de actuar como servidor principal y como cliente (*ProcesamientoTwcam*) que enviará imágenes mediante peticiones POST a la máquina RabbitMQ. Esta segunda máquina virtual actuará como *broker* de mensajes de RabbitMQ, y contendrá las colas de trabajos que se irán almacenando a medida que se realicen peticiones POST. Finalmente, tendremos la máquina Worker, la cuál es la encargada de obtener los diferentes trabajos de la cola de trabajos e ir realizando cada uno de ellos (*ProcesamientoWorker*).
 
