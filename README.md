@@ -23,3 +23,5 @@ Una vez procesada está imagen el Worker la enviará de vuelta a la máquina ori
 Para finalizar el proceso habrá una aplicación(*ProcesamientoEstadisticas*) en la máquina TWCAM a la espera de esta información. Esta generará una serie de ficheros, los cuales serán utilizados para un estudio en profundidad de el rendimiento del sistema.
 
 Además de una sola máquina Worker también se han realizado diferentes pruebas con dos máquinas Worker, trabajando con ellas de forma simúltanea.
+
+*Nota*: el código del servidor contenido en *dynamic-http-server* ha sido desarollado por [Juan Gutierrez Aguado](https://github.com/jgutie2r)
